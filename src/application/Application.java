@@ -19,7 +19,7 @@ public class Application {
 		List<ChessPiece> capturedPieces = new ArrayList<>();
 
 		// keep the looping while don't have the checkmate logic implemented.
-		while (true) {
+		while (!chessMatch.getCheckMate()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, capturedPieces);
@@ -52,6 +52,8 @@ public class Application {
 			}
 
 		}
+		UI.clearScreen();
+		UI.printMatch(chessMatch, capturedPieces);
 
 	}
 }
